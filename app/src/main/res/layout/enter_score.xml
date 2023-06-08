@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!--    <TableLayout-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="match_parent">-->
+    <!--        <TableRow style="@style/HeaderRow">-->
+    <!--            <TextView android:text="Frame"-->
+    <!--                style="@style/HeaderText" />-->
+    <!--            <TextView android:text="Roll 1"-->
+    <!--                style="@style/HeaderText"-->
+    <!--                android:layout_weight="1" />-->
+    <!--            <TextView android:text="Roll 2"-->
+    <!--                style="@style/HeaderText" />-->
+
+    <!--        </TableRow>-->
+    <!--    </TableLayout>-->
+    <EditText
+        android:id="@+id/enterNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:fontFamily="monospace"
+        android:hint="Enter Name"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="356dp"
+        android:layout_height="484dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@id/savescoreBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                style="@style/HeaderRow"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:id="@+id/frame_title"
+                    style="@style/HeaderText"
+                    android:text="@string/frameTitle" />
+
+                <TextView
+                    android:id="@+id/roll1"
+                    style="@style/HeaderText"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/roll1Title" />
+
+                <TextView
+                    android:id="@+id/roll2"
+                    style="@style/HeaderText"
+                    android:layout_width="match_parent"
+                    android:text="@string/roll2Title" />
+
+                <TextView
+                    android:id="@+id/cumulativeScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scoreTitle" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/frame1"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/frame1"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="66dp"
+                    tools:layout_editor_absoluteY="174dp" />
+
+                <EditText
+                    android:id="@+id/frame1_roll1"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:autofillHints=""
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/frame1_roll2"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/frame1BTN"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/saveBTN"
+                    app:backgroundTint="#009688" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/frame2"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="2"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="66dp"
+                    tools:layout_editor_absoluteY="174dp" />
+
+                <EditText
+                    android:id="@+id/frame2_roll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/frame2_roll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/frame2BTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/saveBTN"
+                    app:backgroundTint="#009688" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/frame3"
+                    android:layout_width="64dp"
+                    android:layout_height="58dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="3"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="66dp"
+                    tools:layout_editor_absoluteY="174dp" />
+
+                <EditText
+                    android:id="@+id/frame3_roll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/frame3_roll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/frame3BTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionDone"
+                    android:text="@string/saveBTN"
+                    app:backgroundTint="#009688" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/frame4"
+                    android:layout_width="64dp"
+                    android:layout_height="58dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="4"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="66dp"
+                    tools:layout_editor_absoluteY="174dp" />
+
+                <EditText
+                    android:id="@+id/frame4_roll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/frame4_roll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/frame4BTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionDone"
+                    android:text="@string/saveBTN"
+                    app:backgroundTint="#009688" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/frame5"
+                    android:layout_width="64dp"
+                    android:layout_height="58dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="5"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="66dp"
+                    tools:layout_editor_absoluteY="174dp" />
+
+                <EditText
+                    android:id="@+id/frame5_roll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/frame5_roll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/frame5BTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionDone"
+                    android:text="@string/saveBTN"
+                    app:backgroundTint="#009688" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/frame6"
+                    android:layout_width="64dp"
+                    android:layout_height="58dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="6"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="66dp"
+                    tools:layout_editor_absoluteY="174dp" />
+
+                <EditText
+                    android:id="@+id/frame6_roll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/frame6_roll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/frame6BTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/saveBTN"
+                    app:backgroundTint="#009688" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/frame7"
+                    android:layout_width="64dp"
+                    android:layout_height="58dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="7"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="66dp"
+                    tools:layout_editor_absoluteY="174dp" />
+
+                <EditText
+                    android:id="@+id/frame7_roll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/frame7_roll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/frame7BTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/saveBTN"
+                    app:backgroundTint="#009688" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/frame8"
+                    android:layout_width="64dp"
+                    android:layout_height="58dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="8"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="66dp"
+                    tools:layout_editor_absoluteY="174dp" />
+
+                <EditText
+                    android:id="@+id/frame8_roll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/frame8_roll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/frame8BTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/saveBTN"
+                    app:backgroundTint="#009688" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/frame9"
+                    android:layout_width="64dp"
+                    android:layout_height="58dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="9"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="66dp"
+                    tools:layout_editor_absoluteY="174dp" />
+
+                <EditText
+                    android:id="@+id/frame9_roll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:autofillHints=""
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/frame9_roll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/frame9BTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/saveBTN"
+                    app:backgroundTint="#009688" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/frame10"
+                    android:layout_width="64dp"
+                    android:layout_height="58dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="10"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="66dp"
+                    tools:layout_editor_absoluteY="174dp" />
+
+                <EditText
+                    android:id="@+id/frame10_roll1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/frame10_roll2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/emptyCellFrame10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="monospace"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="66dp"
+                    tools:layout_editor_absoluteY="174dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/frame11"
+                    android:layout_width="64dp"
+                    android:layout_height="58dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="66dp"
+                    tools:layout_editor_absoluteY="174dp" />
+
+                <TextView
+                    android:id="@+id/frame"
+                    android:layout_width="64dp"
+                    android:layout_height="58dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="66dp"
+                    tools:layout_editor_absoluteY="174dp" />
+
+                <EditText
+                    android:id="@+id/frame10_roll3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:hint="@string/rollscore_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/frame10BTN2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/saveBTN"
+                    app:backgroundTint="#009688" />
+
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/totalScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/totalScore_Text"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/savescoreBTN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <Button
+        android:id="@+id/savescoreBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/save_scoreBTN"
+        android:visibility="visible"
+        app:backgroundTint="#E91E63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="57dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/savescoreBTN"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.951"
+        app:srcCompat="@drawable/fui_ic_check_circle_black_128dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

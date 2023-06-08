@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "297896178411",
+    "project_id": "bowlingkingpi",
+    "storage_bucket": "bowlingkingpi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297896178411:android:3471fe5f0da13806f244ae",
+        "android_client_info": {
+          "package_name": "com.example.kingpin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcYlQfF52g2t1pDChIi8trgZu_TPfYyLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
